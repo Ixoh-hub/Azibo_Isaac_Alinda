@@ -1,0 +1,19 @@
+INSIGHTS
+1.  Missing values
+All missing values were filled using mode 
+
+2. Duplicates
+As duplicated data is not wanted, the duplicated rows were dropped
+
+3. Erroneous values
+As per the instruction, the Erroneous values were replaced with NaN that is the string error was detected and replaced
+
+4. Inconsistent Formats
+All datatypes of the columns were inspected and adjusted to hold the correct data values
+
+
+RECOMMENDATIONS
+1. closely monitor factors like Soil_Moisture, Soil_pH, and temperature as they have strong correlations thus 
+are key in determining fertilizer use
+
+2.No crop required adjusted irrigation schedule due to absence of a crop with average temperature of 30degrees
