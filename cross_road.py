@@ -18,6 +18,7 @@ epsilon = 0.2  # exploration rate
 # Training loop
 for episode in range(episodes):
     state = 0  # start position
+    steps = 0  # training progress
     
     while state != goal:
         # Epsilon-greedy action selection
@@ -43,6 +44,11 @@ for episode in range(episodes):
         )
 
         state = next_state
+        steps += 1
+        
+        # episode summary
+        if episode % 100 == 0 or episode == episodes -1:
+            print(f"Episode {episode + 1}/{episodes} finished in {steps} steps.")
 
 # Test the trained agent
 state = 0
@@ -60,3 +66,5 @@ while state != goal:
     steps.append(state)
 
 print("Agent Path to Goal:", steps)
+print("\nFinal Q-table:")
+print(np.round(Q,2))
